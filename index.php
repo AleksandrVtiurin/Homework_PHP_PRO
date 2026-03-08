@@ -1,0 +1,35 @@
+<?php
+require_once 'autoloader.php';
+echo "=== СОЗДАНИЕ ОБЪЕКТОВ ===\n\n";
+use Object\Human\Student;
+echo "--- Студенты ---\n";
+$student1 = new Student("Иван Иванович", 22);
+$student2 = new Student();
+$student1->introduce();
+$student1->haveBirthday();
+echo "\n";
+$student2->introduce();
+$student2->haveBirthday();
+echo "\n";
+use Object\Technics\Transport\Car;
+echo "--- Машины ---\n";
+$car1 = new Car("Audi", "Серебристый");
+$car2 = new Car();
+$car1->honk();
+$car1->repaint("Черный");
+echo "\n";
+$car2->honk();
+$car2->repaint("Синий");
+echo "\n";
+use Object\Technics\Television;
+echo "--- Телевизоры ---\n";
+$tv1 = new Television("LG", 10);
+$tv2 = new Television();
+$tv1->showChannel();
+$tv1->nextChannel();
+echo "\n";
+$tv2->showChannel();
+$tv2->nextChannel();
+echo "\n";
+echo "=== ВСЕ ОБЪЕКТЫ УСПЕШНО СОЗДАНЫ ===\n";
+?>
